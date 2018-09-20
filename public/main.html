@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brain</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.4.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.4.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.4.2/firebase-database.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!--<script defer src="/__/firebase/init.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+  <nav>
+  <ul class="fancyNav">
+  <li id="q_prev"><a href="#" onclick="gotoQuestion(-1);">上一題</a></li>
+  <li id="q_next"><a href="#" onclick="gotoQuestion(1);">下一題</a></li>
+  <li id="q_pls_ans"><a href="#" onclick="pleaseAnswer();">請作答</a></li>
+  <li id="q_show_ans"><a href="#" onclick="showAnswer();">解答</a></li>
+  </ul>
+  </nav>
+  <table class="question">
+  <tr>
+    <th rowspan="3"><img src="master.jpg" class="master"></th>
+    <td id="q_no" class="no"></td>
+  </tr>
+  <tr>
+    <td id="q_quiz" class="quiz"></td>
+  </tr>
+  <tr>
+    <td id="q_ans" class="ans"></td>
+  </tr>
+  </table>
+  <div id="countdown">
+    <div id="countdown-number"></div>
+    <svg>
+      <circle r="180" cx="200" cy="200"></circle>
+    </svg>
+  </div>
+  <table id="p_answer" class="answer">
+  <tr>
+  <td id="p_ans1" class="pans"></td>
+  <td id="p_ans2" class="pans"></td>
+  <td id="p_ans3" class="pans"></td>
+  <td id="p_ans4" class="pans"></td>
+  </tr>
+  </table>
+  <div id="q_desc" class="desc"></div>
+  </body>
+</html>
