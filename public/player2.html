@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brain Player 2</title>
+    <link rel="stylesheet" href="player.css">
+    <!--<link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css">-->
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.4.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.4.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.4.2/firebase-database.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <!--<script defer src="/__/firebase/init.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script defer src="player.js"></script>
+  </head>
+  <body>
+  <h1>乾道－參賽者2號</h1>
+  <table class="question">
+  <tr>
+    <td id="p_no" class="no"></td>
+  </tr>
+  <tr>
+    <td id="p_quiz" class="quiz"></td>
+  </tr>
+  <tr>
+    <td class="ans"><textarea id="p_ans"></textarea></td>
+  </tr>
+  </table>
+  <button class="answer" onclick="sendAnswer(2);">送出答案</button>
+  <div id="p_ans_ok"></div>
+  </body>
+</html>

@@ -32,6 +32,23 @@
           q_quiz.innerHTML = question.quiz;
           });
        });
+      var p_ans1 = document.getElementById("p_ans1");
+      firebase.database().ref('game/answer1').on('value', function(snapshot) {
+        console.log('p_ans1='+snapshot.val());
+        p_ans1.innerHTML = snapshot.val();
+       });
+      firebase.database().ref('game/answer2').on('value', function(snapshot) {
+        console.log('p_ans2='+snapshot.val());
+        p_ans2.innerHTML = snapshot.val();
+       });
+      firebase.database().ref('game/answer3').on('value', function(snapshot) {
+        console.log('p_ans3='+snapshot.val());
+        p_ans3.innerHTML = snapshot.val();
+       });
+      firebase.database().ref('game/answer4').on('value', function(snapshot) {
+        console.log('p_ans4='+snapshot.val());
+        p_ans4.innerHTML = snapshot.val();
+       });
 
 function gotoQuestion(diff) {
   var q = questionIdx + diff;
@@ -43,6 +60,10 @@ function gotoQuestion(diff) {
     q_desc.style.display = "none";
     q_desc.innerHTML = '';
     firebase.database().ref('game/question').set(q);
+    firebase.database().ref('game/answer1').set('');
+    firebase.database().ref('game/answer2').set('');
+    firebase.database().ref('game/answer3').set('');
+    firebase.database().ref('game/answer4').set('');
   }
 }
 
